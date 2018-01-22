@@ -1,1 +1,24 @@
-<p>View 1</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th ng-click="sort('name')" style="cursor: pointer">Name</th>
+                    <th ng-click="sort('category')" style="cursor: pointer">Category</th>
+                    <th ng-click="sort('value')" style="cursor: pointer">Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="value in values | orderBy:place.column:place.descending">
+                    <th>{{value.name}}</th>
+                    <th>{{value.category}}</th>
+                    <th>{{value.amount}}</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
