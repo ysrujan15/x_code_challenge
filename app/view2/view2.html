@@ -1,1 +1,26 @@
-<p>View 2</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>C1</th>
+                    <th>C2</th>
+                    <th>C3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="value in formattedValues | orderBy: 'name'">
+                    <td>{{value.name}}</td>
+                    <td>{{value.C1 > 0? value.C1 : '-'}}</td>
+                    <td>{{value.C2 > 0? value.C2 : '-'}}</td>
+                    <td>{{value.C3 > 0? value.C3 : '-'}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
